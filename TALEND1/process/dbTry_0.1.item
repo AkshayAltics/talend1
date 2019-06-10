@@ -109,7 +109,7 @@
     <routinesParameter id="_NAyaQItLEemsze_5kQmS4g" name="TalendStringUtil"/>
     <routinesParameter id="_NBBDwItLEemsze_5kQmS4g" name="SQLike"/>
   </parameters>
-  <node componentName="tForeach" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="32">
+  <node componentName="tForeach" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tForeach_1"/>
     <elementParameter field="TABLE" name="VALUES">
       <elementValue elementRef="VALUE" value="&quot;cts_mact&quot;"/>
@@ -127,34 +127,7 @@
       <elementValue elementRef="VALUE" value="&quot;cts_caseexpenses&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;cts_casepayments&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;cts_casepayments&quot;"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <node componentName="tForeach" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="96">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tForeach_2"/>
-    <elementParameter field="TABLE" name="VALUES">
-      <elementValue elementRef="VALUE" value="&quot;cts_mact&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mcasecategory&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mcity&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mclients&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mcourt&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mcourtcategory&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_casedocuments&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mstate&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_musers&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_casediarydetailsold&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_casediarydetails&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_casediarymaster&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_caseexpenses&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_casepayments&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;cts_casetaskmaster&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_madvocates&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mappearedfor&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mcasestage&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mdocuments&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_scasepayments&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_taskmaster&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_taskupdates&quot;"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
@@ -174,7 +147,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from &quot; + ((String)globalMap.get(&quot;tForeach_2_CURRENT_VALUE&quot;))"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from &quot; + ((String)globalMap.get(&quot;tForeach_1_CURRENT_VALUE&quot;))"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -217,7 +190,35 @@
       <column comment="" defaultValue="NULL" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="&quot;1999-03-12 09:06:12&quot;" precision="-1" sourceType="VARCHAR" type="id_Dynamic" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tForeach_2" offsetLabelX="0" offsetLabelY="0" source="tForeach_2" target="tDBInput_1">
+  <node componentName="tForeach" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tForeach_2"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="VALUE" value="&quot;cts_mact&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mcasecategory&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mcity&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mclients&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mcourt&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mcourtcategory&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casedocuments&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mstate&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_musers&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casediarydetailsold&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casediarydetails&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casediarymaster&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_caseexpenses&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casepayments&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casetaskmaster&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_madvocates&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mappearedfor&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mcasestage&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mdocuments&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_scasepayments&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_taskmaster&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_taskupdates&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tForeach_1" offsetLabelX="0" offsetLabelY="0" source="tForeach_1" target="tDBInput_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
@@ -236,13 +237,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f71b4e80-d52f-44c8-86a9-065a2406683e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VqCeCImyf/RoASSSldR8RAI9cS+J+aaHohRv2x4QVYLlJEht9LjRiiWYnhDhjuFbmjHNON9hW8Yk
-DYVNin7tTw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ce04c044-ea60-4834-9632-3af0f156a8bc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>i7sT/sda0jgrqlOd78KP/21uMntj9i3dxh/pYqaLuSTnY9qOkxKGyd96TB7UwRpSW/l3ofv6oa0E
-5XnOqAE2EQ==</DigestValue></Reference></SignedInfo><SignatureValue>Z0pUnAKtyu30rjhgC8O0fRKjoAI2iJeVGoVw/D1CoT/eBCK2mgYT/pZd9ZMWclStlP1gZP7XjXJt
-miXJzZheL92DXe8dW/VAqswAkqVOZQ4vBVcrEp5hiR5ddAm1g4NnYUMBRxNNLnP2KFg2w71iLw/D
-Wqf0D5t/Y2JI/KaVcWL9r9rpDNDfnDrvlWUW5viR10sSbx/BpY+xI0mqfkvenXdEh3Wcqo8tr8Xm
-+bfmNZZ0uWQh7oRYsPs4ZNXBI245fuYRpp6KPCLYQ/rB2Yxzo+lqp4TvCF2VbpNRVJ4zw44MQ6m6
-NtP5CpiArk2hp51ZCkxafTEfk6W+sqT1A/1DYw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2e22baa5-523d-4ac5-80a6-a43d54e02d54"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>B0hMIh8tn3dwYLEoy+rKd7bmBgqfw4KGGA2EUVfiBvEu5Hw/tSu3+ttQZO5vjysXKYej0zhVLFpr
+WXP9KCJCxQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b3952b64-4987-49df-a6be-0bd2fd4340b1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dWB9CeWk1TrUEUSqPiweCFJPxQpnAXZORglgMnCht8Ba6INyOpJCkJb3l9n8RCTN5bBSN1k6jRVm
+q68J8IdhBg==</DigestValue></Reference></SignedInfo><SignatureValue>3C6u77SyWhwBpd83niiRbqFFEaxZZlVVgonjUKX56inAkkQnPYcmF8FZNYo2POggDg1DI1sk8FWD
+qY1LuPgIdeXb6REKNWpMGFBNQgDoYV24IVZXBP1bjB4u9In4eyeerZdF+ohcA8uC/ce9hqU+v312
+Jbgzo9ccwaGupis+qvqW0QqPWkykaSAhELoeJ3Bhidz1JRwJLVaJb5JnJvuJGTZQhPtyghfT6qMt
+lQV5Eu0lh8k00VWeQ8THjPjbwaF0Dg5ctnsVuk6QTZoLfncaCBhViOQj7rTxIlxVfCNA2x6whCHa
+iWfgrtuRngN9vKJ6o14tTF4XWG7OH07P6Gf9tA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -266,4 +267,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ce04c044-ea60-4834-9632-3af0f156a8bc" Target="#_f71b4e80-d52f-44c8-86a9-065a2406683e"><Timestamp>2019-06-10 08:58:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b3952b64-4987-49df-a6be-0bd2fd4340b1" Target="#_2e22baa5-523d-4ac5-80a6-a43d54e02d54"><Timestamp>2019-06-10 09:02:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
