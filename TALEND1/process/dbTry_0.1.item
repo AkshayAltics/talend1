@@ -119,21 +119,6 @@
       <elementValue elementRef="VALUE" value="&quot;cts_mcourt&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;cts_mcourtcategory&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;cts_casedocuments&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mstate&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_musers&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_casediarydetailsold&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_casediarydetails&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_casediarymaster&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_caseexpenses&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_casepayments&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_casetaskmaster&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_madvocates&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mappearedfor&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mcasestage&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_mdocuments&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_scasepayments&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_taskmaster&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;cts_taskupdates&quot;"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
@@ -196,6 +181,34 @@
       <column comment="" defaultValue="NULL" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="&quot;1999-03-12 09:06:12&quot;" precision="-1" sourceType="VARCHAR" type="id_Dynamic" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tForeach" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tForeach_2"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="VALUE" value="&quot;cts_mact&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mcasecategory&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mcity&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mclients&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mcourt&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mcourtcategory&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casedocuments&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mstate&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_musers&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casediarydetailsold&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casediarydetails&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casediarymaster&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_caseexpenses&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casepayments&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_casetaskmaster&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_madvocates&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mappearedfor&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mcasestage&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_mdocuments&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_scasepayments&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_taskmaster&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;cts_taskupdates&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tForeach_1" offsetLabelX="0" offsetLabelY="0" source="tForeach_1" target="tDBInput_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
@@ -210,13 +223,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c0294acf-191f-4484-a5c1-1af039dac7fe"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0WDwwHskF9tGAUKQMScmtAPdo2Jqmwi56kWcUWj3rGpALO2qb+ymwE+7R3J5Mvj1h/DiOcRKLGvU
-0uIJGjvCzA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5c624694-6f10-460b-9d8f-ac62f747c205"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>W5Px4qL8Tr3C2qXVuUcIC48iPJ1nx/2kiPKQdgeCNlNdCUlnk8MAnpm11B7mRu5vQ0qecs4jXDci
-bdVct/ocag==</DigestValue></Reference></SignedInfo><SignatureValue>OxlLPaV2n8ACoeRmYQr3KucUQkqfk9KNRYauXbSWbglcCOXN1rXsWYkebvKTzniUUgExaIK3Lp2s
-Np1Piyaz9TT3ErELldhjrPO06sK7I/UfSBGjf6l4Q3lTSN9RVX4SCTpuHDzFSjsG7jM7kPkmRjnI
-fWLAgAeZhjURw3GDEkhRTZJuNkh5srCYTx81+mfkuoVb3rbvbXAEMQVEhB3tLNkzzJQRlmj2wU27
-SbkDQYnJSV8VyFhG410yHG9fdLyZ2B8OwCzR6TQQ29ny5pWPYZYE1q4R2JP+cDlyLILAkVjP//0Y
-qbEQJLVqXGNUQH5xF00ix5Dj8/ugeJydzdks1Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tForeach_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c44e7f17-41c5-4e74-a567-932e68fb6b97"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LGnm8riHcKtYl7uLtlbz/afRiL11i9xlini7y7tWx9lViS796Oo7/eJAy9MLdkLFqtZsYRAUl1Q/
+FbR2zHg+vA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_61de0be1-2256-4dc4-bf96-8298660b88a3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dBl3CPhJ0x2y+4HoUjAQwzEFVEGHTYO/VaWQE90bcM/twcRq7SE85J8IsUHoFBgzopWpdb8+10Ij
+6Jl8vg17HQ==</DigestValue></Reference></SignedInfo><SignatureValue>MOdsvCu76/WypWkvWUTfaK1dAnL8YUMT6tq5zqX7+VxrPHtS3nybnlkDk6R8GhxKgXud3tn8tdXf
+cGUYDRV0q2nID/eYrukySxBEOvSbelSz5GcxHusNMdy5sCXcN1kzOk6cvwXmz78QmUZebSqOqVvF
+YTMXpv+7mJKwGHZ7DcmH63fQJyXLvRbxYz/FB16Tpw/mkxLxQ+Qy5LdGIN2bMEuYCvhwYmzREf5D
+1/Wb+kszkDwRDIHlFJS3V4m/xG8/1eYXEyee81Lwp3jpACGDs0DVPBTE3/ZzMEmuZY4osjsWVBs9
+Hk7Q+xgyC6Rdc5DClXuAbyIL2pmyiClIip8mIQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -240,4 +258,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5c624694-6f10-460b-9d8f-ac62f747c205" Target="#_c0294acf-191f-4484-a5c1-1af039dac7fe"><Timestamp>2019-06-10 08:25:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_61de0be1-2256-4dc4-bf96-8298660b88a3" Target="#_c44e7f17-41c5-4e74-a567-932e68fb6b97"><Timestamp>2019-06-10 08:28:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
