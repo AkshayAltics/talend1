@@ -53,7 +53,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				
 				String data = sh.getCell(col, row).getContents();
 				String val = sh.getCell(col,0).getContents();
-				if(data=="null")
+				if(data=="null" || val=="null" )
 				{
 					//System.out.println(""+sh.getCell(col, row));
 				
