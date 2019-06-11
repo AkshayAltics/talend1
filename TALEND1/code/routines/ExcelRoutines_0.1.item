@@ -1,10 +1,13 @@
 package routines;
 
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
+
 import java.util.HashMap;
 
 public class ExcelRoutines {
@@ -31,7 +34,7 @@ public class ExcelRoutines {
 		
 	
 		String shn[]=wb.getSheetNames();
-		FileInputStream fileoutput = new FileInputStream("F:\\Talend workspacce\\testing_10062019.csv"); 
+		String fileoutput = new FileInputStream("F:\\Talend workspacce\\testing_10062019.csv"); 
 	    
 for(int s=0;s<wb.getSheetNames().length;s++)
 {
@@ -57,7 +60,21 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 						
 				     }
 				System.out.println(sheetdata);
-				
+				 try { 
+				        // create FileWriter object with file as parameter 
+				        FileWriter outputfile = new FileWriter(fileoutput); 
+				  
+				        // create CSVWriter object filewriter object as parameter 
+				        CSVWriter writer = new CSVWriter(outputfile); 
+				  
+				       
+				        // closing writer connection 
+				        writer.close(); 
+				    } 
+				    catch (IOException e) { 
+				        // TODO Auto-generated catch block 
+				        e.printStackTrace(); 
+				    } 
 				System.out.println("\t");
 				sheetdata.clear();
 			}
