@@ -52,12 +52,12 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 			for (int col = 0; col < totalNoOfCols; col++) {
 				
-				int col1=col+0;int col2=col+1;int col3=col+2;int col4=col+3;int col5=col+4;
-				sheetdata.put("ID",sh.getCell(col1, row).getContents());
-				sheetdata.put("FirstName",sh.getCell(col2, row).getContents());
-				sheetdata.put("LastName",sh.getCell(col3, row).getContents());
-				sheetdata.put("City",sh.getCell(col4, row).getContents());
-				sheetdata.put("State",sh.getCell(col5, row).getContents());
+
+				sheetdata.put("ID",sh.getCell(col, row).getContents());
+				sheetdata.put("FirstName",sh.getCell(col, row).getContents());
+				sheetdata.put("LastName",sh.getCell(col, row).getContents());
+				sheetdata.put("City",sh.getCell(col, row).getContents());
+				sheetdata.put("State",sh.getCell(col, row).getContents());
 
 			   
 
