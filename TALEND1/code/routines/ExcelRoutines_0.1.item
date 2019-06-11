@@ -52,6 +52,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 String colname[]={"ID","FirstName","LastName","City","State"};
 			for (int col = 0; col < totalNoOfCols; col++) {
 				String data=sh.getCell(col, row).getContents();
+				if(data=="null")
 				//System.out.println(""+sh.getCell(col, row));
 				sheetdata.put(colname[col],data);
 			//	sheetdata.put("FirstName",sh.getCell(col, row).getContents());
