@@ -48,7 +48,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 		System.out.println("no of rows "+totalNoOfRows);
 		for (int row = 0; row < totalNoOfRows; row++) {
 //int head=0;
-			System.out.print(sh.getCell("ID", row).getContents() + "\t");
+			System.out.print(sh.getCell(1, row).getContents() + "\t");
 			for (int col = 0; col < totalNoOfCols; col++) {
 				System.out.print(sh.getCell(col, row).getContents() + "\t");
 				
