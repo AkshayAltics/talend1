@@ -69,7 +69,7 @@ String colname[]={"ID","FirstName","LastName","City","State"};
 
 		}
 			System.out.println(sheetdata);
-			sheetdata.put("null, "null");
+			sheetdata.put("null", "null");
 			System.out.println("\t");
 		}
 	}
