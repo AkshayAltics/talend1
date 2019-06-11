@@ -42,47 +42,23 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 		int totalNoOfRows = sh.getRows();
 		// To get the number of columns present in sheet
 		int totalNoOfCols = sh.getColumns();
-
-		//System.out.println("total no of columns "+totalNoOfCols);
-		//System.out.println("no of rows "+totalNoOfRows);
 		
-		
-		for (int row = 0; row < totalNoOfRows; row++) {
-			  HashMap<String, String> sheetdata = new HashMap<String, String>();
+		for (int row = 0; row < totalNoOfRows; row++)
+		{
+			HashMap<String, String> sheetdata = new HashMap<String, String>();
 			
       // String colname[] ={"ID","FirstName","LastName","City","State"};
 			
 			for (int col = 0; col < totalNoOfCols; col++) {
-				String test="";
+		
 				String data = sh.getCell(col, row).getContents();
 				String val = sh.getCell(col,0).getContents();
-				//String val = colname[col];
-				if(val=="")
-				{
-					 data = sh.getCell(col, row).getContents();
-					System.out.println("here is the null column is "+sh.getCell(col,0).getContents());
-				
-				sheetdata.put(val,"null");
-				}
-				else
-				{
-					//System.out.println("here is the not null data"+sh.getCell(col, row).getContents());
-					sheetdata.put(sh.getCell(col,0).getContents(),data);
-				}
-				
-			//	sheetdata.put("FirstName",sh.getCell(col, row).getContents());
-			//	sheetdata.put("LastName",sh.getCell(col, row).getContents());
-				//sheetdata.put("City",sh.getCell(col, row).getContents());
-				//sheetdata.put("State",sh.getCell(col, row).getContents());
-				
-				
-				//System.out.println("name of \t"+val);
-				
-				
+				sheetdata.put(sh.getCell(col,0).getContents(),data);
+					
 				
 		}
 			System.out.println(sheetdata);
-			//System.out.println("\t");
+			System.out.println("\t");
 			sheetdata.clear();
 		}
 		
