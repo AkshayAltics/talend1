@@ -16,7 +16,8 @@ public class ExcelRoutines {
         }
         System.out.println("Hello " + message + " !"); //$NON-NLS-1$ //$NON-NLS-2$
     }
-    String set1=superSetOfColumns();
+  
+    
     
     public static void readExcel() throws BiffException, IOException {
 		String FilePath = "F:\\Talend workspacce\\EMPExcelSampleData.xls";
@@ -80,7 +81,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 		}
 		
 	    }
-
+String set1=superSetOfColumns();
 
     }
     
