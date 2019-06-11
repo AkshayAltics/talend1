@@ -71,10 +71,10 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				
 				//System.out.println("name of \t"+val);
 				
-				
+				System.out.println(sheetdata);
+				sheetdata.remove(col);
 		}
-			System.out.println(sheetdata);
-			sheetdata.remove(0);
+
 			System.out.println("\t");
 		}
 		
