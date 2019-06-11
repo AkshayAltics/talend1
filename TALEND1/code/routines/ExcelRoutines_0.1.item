@@ -50,7 +50,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 //int head=0;
 			//System.out.print(sh.getCell(1, row).getContents() + "\t");
 
-			for (int col = 0; col < totalNoOfCols; col++) {
+			
 				
 				int col1=col+0;int col2=col+1;int col3=col+2;int col4=col+3;int col5=col+4;
 				sheetdata.put("ID",sh.getCell(col1, row).getContents());
@@ -61,7 +61,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 			   
 
-		}
+		
 			System.out.println(sheetdata); 
 			System.out.println("\t");
 		}
