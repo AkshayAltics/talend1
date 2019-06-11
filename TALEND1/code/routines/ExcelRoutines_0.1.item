@@ -51,7 +51,9 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 			System.out.print(sh.getCell(1, row).getContents() + "\t");
 			sheetdata.put("ID",sh.getCell(1, row).getContents());
 			sheetdata.put("FirstName",sh.getCell(2, row).getContents());
-			sheetdata.put("LastName",sh.getCell(2, row).getContents());
+			sheetdata.put("LastName",sh.getCell(3, row).getContents());
+			sheetdata.put("City",sh.getCell(4, row).getContents());
+			sheetdata.put("State",sh.getCell(5, row).getContents());
 			//for (int col = 0; col < totalNoOfCols; col++) {
 			//	System.out.print(sh.getCell(col, row).getContents() + "\t");
 				
