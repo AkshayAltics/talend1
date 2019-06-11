@@ -52,7 +52,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				String val = sh.getCell(col,0).getContents();
 				if(data=="null" || val=="null" )
 				{
-					System.out.println("here is the null data"+sh.getCell(col, row));
+					System.out.println("here is the null data"+sh.getCell(col, row).getContents());
 				
 				sheetdata.put("null","null");
 				}
