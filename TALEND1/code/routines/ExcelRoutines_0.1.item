@@ -47,7 +47,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 			sheetdata.remove(row);
 
 			for (int col = 0; col < totalNoOfCols; col++) {
-				
+				String test="";
 				String data = sh.getCell(col, row).getContents();
 				String val = sh.getCell(col,0).getContents();
 				if(val.isEmpty()&& data.isEmpty())
