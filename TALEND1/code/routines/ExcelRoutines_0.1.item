@@ -67,7 +67,7 @@ String colname[]={"ID","FirstName","LastName","City","State"};
 				
 				String val = sh.getCell(0,col).getContents();
 				
-				System.out.println("\t"+val);
+				System.out.println("name of \t"+val);
 		}
 			System.out.println(sheetdata);
 		
