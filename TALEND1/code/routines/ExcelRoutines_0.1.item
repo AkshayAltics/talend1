@@ -74,10 +74,10 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				
 		}
 			System.out.println(sheetdata);
-		
+			sheetdata.remove(0);
 			System.out.println("\t");
 		}
-		sheetdata.remove(0);
+		
 	}
 
 
