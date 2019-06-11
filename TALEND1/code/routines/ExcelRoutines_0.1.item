@@ -56,6 +56,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				if(val=="null")
 				{
 					//System.out.println(""+sh.getCell(col, row));
+					sheetdata.remove(col);
 				sheetdata.put(sh.getCell(col,0).getContents(),data);
 				}
 				else
@@ -71,10 +72,10 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				
 				//System.out.println("name of \t"+val);
 				
-				System.out.println(sheetdata);
-				sheetdata.remove(col);
+			
+				
 		}
-
+			System.out.println(sheetdata);
 			System.out.println("\t");
 		}
 		
