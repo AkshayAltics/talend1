@@ -35,7 +35,7 @@ public class ExcelRoutines {
 	    {
 	    	sh=wb.getSheet(s);
 	    	na=sh.getCell(0,0).toString();
-
+	    	System.out.println("nothing "+na);
 	    }
 	
 	    
