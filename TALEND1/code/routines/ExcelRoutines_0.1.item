@@ -52,7 +52,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 			for (int col = 0; col < totalNoOfCols; col++) {
 				sheetdata.remove(col);
 				String data = sh.getCell(col, row).getContents();
-				String val = sh.getCell(col,0).getContents();
+				//String val = sh.getCell(col,0).getContents();
 				if(data=="null")
 				{
 					//System.out.println(""+sh.getCell(col, row));
