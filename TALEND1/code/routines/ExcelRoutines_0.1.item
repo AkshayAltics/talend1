@@ -1,41 +1,62 @@
 package routines;
 
-/*
- * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
- * it must be before the "{talendTypes}" key.
- * 
- * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
- * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
- * Short
- * 
- * 3. {Category} define a category for the Function. it is required. its value is user-defined .
- * 
- * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
- * 
- * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
- * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
- * added. you can have many parameters for the Function.
- * 
- * 5. {example} gives a example for the Function. it is optional.
- */
+import java.io.FileInputStream;
+import java.io.IOException;
+import jxl.Sheet;
+import jxl.Workbook;
+import jxl.read.biff.BiffException;
+import java.util.HashMap;
+
 public class ExcelRoutines {
 
-    /**
-     * helloExample: not return value, only print "hello" + message.
-     * 
-     * 
-     * {talendTypes} String
-     * 
-     * {Category} User Defined
-     * 
-     * {param} string("world") input: The string need to be printed.
-     * 
-     * {example} helloExemple("world") # hello world !.
-     */
+   
     public static void helloExample(String message) {
         if (message == null) {
             message = "World"; //$NON-NLS-1$
         }
         System.out.println("Hello " + message + " !"); //$NON-NLS-1$ //$NON-NLS-2$
     }
+    
+    public static void readExcel() throws BiffException, IOException {
+		String FilePath = "F:\\Talend workspacce\\EMPExcelSampleData.xls";
+		FileInputStream fs = new FileInputStream(FilePath);
+		Workbook wb = Workbook.getWorkbook(fs);
+
+		// TO get the access to the sheet
+		Sheet sh = wb.getSheet("Sheet1");
+		
+		// To get the number of rows present in sheet
+
+		
+		String shn[]=wb.getSheetNames();
+	    HashMap<String, String> sheetdata = new HashMap<String, String>();	
+
+	    System.out.println(sheetdata); 
+for(int s=0;s<wb.getSheetNames().length;s++)
+{
+
+		System.out.println("nothing "+shn[s]);
+
+		sh=wb.getSheet(s);
+		int totalNoOfRows = sh.getRows();
+		// To get the number of columns present in sheet
+		int totalNoOfCols = sh.getColumns();
+
+		for (int row = 0; row < totalNoOfRows; row++) {
+
+			for (int col = 0; col < totalNoOfCols; col++) {
+				System.out.print(sh.getCell(col, row).getContents() + "\t");
+			//	sheetdata.put("ID", sh.getCell(col, row).getContents());
+			}
+			System.out.println(wb.getCell("ID"));
+		}
+	}
+
+
+
+
+
+    }
+    
+
 }
