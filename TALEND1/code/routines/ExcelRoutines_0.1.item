@@ -50,7 +50,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 			for (int col = 0; col < totalNoOfCols; col++) {
 				System.out.print(sh.getCell(col, row).getContents() + "\t");
-				sheetdata.put(sh.getCell(col), sh.getCell(col, row).getContents());
+				sheetdata.put(sh.getCell(col,"0"), sh.getCell(col, row).getContents());
 			    sheetdata.put("FirstName", sh.getCell(col, row).getContents());
 			    System.out.println(sheetdata); 
 			}
