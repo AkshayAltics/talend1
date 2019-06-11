@@ -59,7 +59,7 @@ String colname[]={"ID","FirstName","LastName","City","State"};
 				}
 				else
 				{
-					sheetdata.put(colname[col],data);
+					sheetdata.put(sh.getCell(col,0).getContents(),data);
 				}
 			//	sheetdata.put("FirstName",sh.getCell(col, row).getContents());
 			//	sheetdata.put("LastName",sh.getCell(col, row).getContents());
