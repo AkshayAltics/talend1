@@ -36,9 +36,11 @@ public class ExcelRoutines {
 	    {
 	    	sh=wb.getSheet(s);
 	    	int sh1 = sh.getColumns();
+	    	for (int col = 0; col < sh1; col++) {
+	    	
 	    	sheetdata1.put(shn[s], sh1);
 	    	
-	    	
+	    	}
 	    	System.out.println("nothing "+sh1);
 	    }
 	
