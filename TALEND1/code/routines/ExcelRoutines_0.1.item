@@ -49,11 +49,11 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 		for (int row = 0; row < totalNoOfRows; row++) {
 //int head=0;
 			//System.out.print(sh.getCell(1, row).getContents() + "\t");
+			sheetdata.put("",sh.getCell(0, row).getContents());
 			sheetdata.put("",sh.getCell(1, row).getContents());
 			sheetdata.put("",sh.getCell(2, row).getContents());
 			sheetdata.put("",sh.getCell(3, row).getContents());
 			sheetdata.put("",sh.getCell(4, row).getContents());
-			sheetdata.put("",sh.getCell(5, row).getContents());
 			//for (int col = 0; col < totalNoOfCols; col++) {
 			//	System.out.print(sh.getCell(col, row).getContents() + "\t");
 				
