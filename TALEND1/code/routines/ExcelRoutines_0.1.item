@@ -27,24 +27,10 @@ public class ExcelRoutines {
 		
 		// To get the number of rows present in sheet
 
-		String shn_no[]={},na;
+	
 		String shn[]=wb.getSheetNames();
 	    HashMap<String, String> sheetdata = new HashMap<String, String>();	
-	    HashMap<String, String> sheetdata1 = new HashMap<String, String>();	
-	    
-	    for(int s=0;s<wb.getSheetNames().length;s++)
-	    {
-	    	sh=wb.getSheet(s);
-	    	int sh1 = sh.getColumns();
-	    	for (int col = 0; col < sh1; col++) {
-	    		String val = sh.getCell(col,0).getContents();
-	    	sheetdata1.put(shn[s], val);
-	    	
-	    	}
-	    	System.out.println("nothing "+sh1);
-	    }
-	
-	    System.out.println("nothing sheetdata1"+sheetdata1);
+
 for(int s=0;s<wb.getSheetNames().length;s++)
 {
 
