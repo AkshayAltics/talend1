@@ -30,11 +30,15 @@ public class ExcelRoutines {
 		String shn_no[]={},na;
 		String shn[]=wb.getSheetNames();
 	    HashMap<String, String> sheetdata = new HashMap<String, String>();	
+	    HashMap<String, int> sheetdata1 = new HashMap<String, int>();	
 	    
 	    for(int s=0;s<wb.getSheetNames().length;s++)
 	    {
 	    	sh=wb.getSheet(s);
 	    	int sh1 = sh.getColumns();
+	    	
+	    	
+	    	
 	    	System.out.println("nothing "+sh1);
 	    }
 	
