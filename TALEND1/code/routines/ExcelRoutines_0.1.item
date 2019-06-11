@@ -51,7 +51,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 			
 			for (int col = 0; col < totalNoOfCols; col++) {
 				//System.out.print(sh.getCell(col, row).getContents() + "\t");
-				sheetdata.put(sh.getColumn(col),sh.getRow(row));
+				
 
 			    System.out.println(sheetdata); 
 
