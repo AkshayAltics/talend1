@@ -52,7 +52,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 			for (int col = 0; col < totalNoOfCols; col++) {
 				
-					System.out.println(col+""+sh.getCell(col).getStringCellValue());
+					System.out.println(col+""+sh.getCell(1).getStringCellValue());
 				sheetdata.put("ID",sh.getCell(col, row).getContents());
 				sheetdata.put("FirstName",sh.getCell(col, row).getContents());
 				sheetdata.put("LastName",sh.getCell(col, row).getContents());
