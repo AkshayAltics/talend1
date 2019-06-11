@@ -43,7 +43,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 		int totalNoOfRows = sh.getRows();
 		// To get the number of columns present in sheet
 		int totalNoOfCols = sh.getColumns();
-		System.out.println(wb.getCell("ID"));
+		System.out.println(wb.getCell(1));
 		System.out.println("total no of columns "+totalNoOfCols);
 		System.out.println("no of rows "+totalNoOfRows);
 		for (int row = 0; row < totalNoOfRows; row++) {
