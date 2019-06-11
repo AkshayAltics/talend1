@@ -56,7 +56,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 					String data = sh.getCell(val, row).getContents();
 					System.out.println("here is the null column is "+sh.getCell(col,0).getContents());
 				
-				sheetdata.put(val.getContents(),"null");
+				sheetdata.put(val,"null");
 				}
 				else
 				{
