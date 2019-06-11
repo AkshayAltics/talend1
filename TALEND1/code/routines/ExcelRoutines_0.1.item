@@ -16,7 +16,7 @@ public class ExcelRoutines {
         }
         System.out.println("Hello " + message + " !"); //$NON-NLS-1$ //$NON-NLS-2$
     }
-    
+    String set=superSetOfColumns();
     public static void readExcel() throws BiffException, IOException {
 		String FilePath = "F:\\Talend workspacce\\EMPExcelSampleData.xls";
 		FileInputStream fs = new FileInputStream(FilePath);
@@ -26,7 +26,7 @@ public class ExcelRoutines {
 		Sheet sh = wb.getSheet("Sheet1");
 		
 		// To get the number of rows present in sheet
-		String set=superSetOfColumns();
+		
 	
 		String shn[]=wb.getSheetNames();
 	    HashMap<String, String> sheetdata = new HashMap<String, String>();	
