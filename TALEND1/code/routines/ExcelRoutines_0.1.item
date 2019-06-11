@@ -51,6 +51,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 			//System.out.print(sh.getCell(1, row).getContents() + "\t");
 String colname[]={"ID","FirstName","LastName","City","State"};
 String val = sh.getCell(0,1).getContents();
+System.out.println("name of \t"+val);
 			for (int col = 0; col < totalNoOfCols; col++) {
 				String data=sh.getCell(col, row).getContents();
 				if(data=="null")
@@ -68,7 +69,7 @@ String val = sh.getCell(0,1).getContents();
 				
 				
 				
-				System.out.println("name of \t"+val);
+				
 		}
 			System.out.println(sheetdata);
 		
