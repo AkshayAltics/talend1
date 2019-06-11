@@ -51,7 +51,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 			for (int col = 0; col < totalNoOfCols; col++) {
 				sheetdata.remove(col);
-				String data="null";
+				String data = sh.getCell(col, row).getContents();
 				String val = sh.getCell(col,0).getContents();
 				if(val=="null")
 				{
@@ -61,7 +61,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				}
 				else
 				{
-					data = sh.getCell(col, row).getContents();
+					
 					sheetdata.put(sh.getCell(col,0).getContents(),data);
 				}
 			//	sheetdata.put("FirstName",sh.getCell(col, row).getContents());
