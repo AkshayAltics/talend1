@@ -25,7 +25,7 @@ public class ExcelRoutines {
 		Workbook wb = Workbook.getWorkbook(fs);
 
 		// TO get the access to the sheet
-		Sheet sh = wb.getSheet(1);
+		Sheet sh = wb.getSheet();
 		
 		// To get the number of rows present in sheet
 		
