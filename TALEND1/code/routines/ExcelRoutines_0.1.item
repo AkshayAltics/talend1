@@ -47,10 +47,10 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 		//System.out.println("total no of columns "+totalNoOfCols);
 		//System.out.println("no of rows "+totalNoOfRows);
 		for (int row = 0; row < totalNoOfRows; row++) {
-
+			sheetdata.remove(row);
 
 			for (int col = 0; col < totalNoOfCols; col++) {
-				sheetdata.remove(col);
+				
 				String data = sh.getCell(col, row).getContents();
 				//String val = sh.getCell(col,0).getContents();
 				if(data=="null")
