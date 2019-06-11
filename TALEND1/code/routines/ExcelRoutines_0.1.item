@@ -65,7 +65,7 @@ String colname[]={"ID","FirstName","LastName","City","State"};
 				//sheetdata.put("City",sh.getCell(col, row).getContents());
 				//sheetdata.put("State",sh.getCell(col, row).getContents());
 				
-				 	
+				CellReference.convertNumToColString(sh.getColumnIndex());	
 
 		}
 			System.out.println(sheetdata);
@@ -80,5 +80,8 @@ String colname[]={"ID","FirstName","LastName","City","State"};
 
     }
     
-
+    private static String getCellName(Cell cell)
+    {
+        return CellReference.convertNumToColString(cell.getColumnIndex()) + (cell.getRowIndex() + 1);
+    }
 }
