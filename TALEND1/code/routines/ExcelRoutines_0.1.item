@@ -50,13 +50,13 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 
 			for (int col = 0; col < totalNoOfCols; col++) {
-				
+				sheetdata.remove(col);
 				String data="null";
 				String val = sh.getCell(col,0).getContents();
 				if(val=="null")
 				{
 					//System.out.println(""+sh.getCell(col, row));
-					sheetdata.remove(col);
+				
 				sheetdata.put(sh.getCell(col,0).getContents(),data);
 				}
 				else
