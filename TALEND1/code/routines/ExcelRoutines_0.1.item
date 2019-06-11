@@ -54,7 +54,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				{
 					//System.out.println(""+sh.getCell(col, row));
 				
-				sheetdata.put(sh.getCell(col,0).getContents(),"null");
+				sheetdata.put("null","null");
 				}
 				else
 				{
@@ -76,10 +76,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 			System.out.println("\t");
 		}
 		
-	}
-
-
-
+	    }
 
 
     }
