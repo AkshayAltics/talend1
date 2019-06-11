@@ -45,31 +45,23 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 		
 		for (int row = 0; row < totalNoOfRows; row++)
 		{
-			HashMap<String, String> sheetdata = new HashMap<String, String>();
-			
-      // String colname[] ={"ID","FirstName","LastName","City","State"};
-			
-			for (int col = 0; col < totalNoOfCols; col++) {
-		
-				String data = sh.getCell(col, row).getContents();
-				String val = sh.getCell(col,0).getContents();
-				sheetdata.put(sh.getCell(col,0).getContents(),data);
+					HashMap<String, String> sheetdata = new HashMap<String, String>();
 					
+		           // String colname[] ={"ID","FirstName","LastName","City","State"};
+					
+					for (int col = 0; col < totalNoOfCols; col++) {
 				
-		}
-			System.out.println(sheetdata);
-			System.out.println("\t");
-			sheetdata.clear();
-		}
+						String data = sh.getCell(col, row).getContents();
+						String val = sh.getCell(col,0).getContents();
+						sheetdata.put(sh.getCell(col,0).getContents(),data);
+						
+				     }
+				System.out.println(sheetdata);
+				System.out.println("\t");
+				sheetdata.clear();
+			}
 		
 	    }
 
-
     }
-    
-    
-
-
-    
-
-}
+ }
