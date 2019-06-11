@@ -50,16 +50,16 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 
 			for (int col = 0; col < totalNoOfCols; col++) {
-				
+				String data="null"
 				String val = sh.getCell(col,0).getContents();
 				if(val=="null")
 				{
 					//System.out.println(""+sh.getCell(col, row));
-				sheetdata.put(sh.getCell(col,0).getContents(),"");
+				sheetdata.put(sh.getCell(col,0).getContents(),data);
 				}
 				else
 				{
-					data=sh.getCell(col, row).getContents();
+					data = sh.getCell(col, row).getContents();
 					sheetdata.put(sh.getCell(col,0).getContents(),data);
 				}
 			//	sheetdata.put("FirstName",sh.getCell(col, row).getContents());
