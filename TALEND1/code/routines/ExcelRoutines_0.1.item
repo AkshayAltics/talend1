@@ -58,11 +58,11 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				sheetdata.put("LastName",sh.getCell(col, row).getContents());
 				sheetdata.put("City",sh.getCell(col, row).getContents());
 				sheetdata.put("State",sh.getCell(col, row).getContents());
-
+				System.out.println(sheetdata); 
 			   
 
 		}
-			System.out.println(sheetdata); 
+			
 			System.out.println("\t");
 		}
 	}
