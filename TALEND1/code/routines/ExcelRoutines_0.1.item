@@ -81,16 +81,13 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 		}
 		
 	    }
-String set1=superSetOfColumns();
+
 
     }
     
     
     public String superSetOfColumns()
-    {
-    	return "S";
-    	
-    }
+
     
 
 }
