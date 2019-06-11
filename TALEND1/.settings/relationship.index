@@ -246,6 +246,10 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
+    "id" : "ExcelRoutines",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
     "id" : "Excelroutine",
     "version" : "Latest",
     "type" : "routine"
