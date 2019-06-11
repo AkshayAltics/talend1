@@ -80,7 +80,7 @@ String colname[]={"ID","FirstName","LastName","City","State"};
 
     }
     
-    private static String getCellName(Cell cell)
+    private static String getCellName(Int cell)
     {
         return sh.convertNumToColString(cell.getColumnIndex()) + (cell.getRowIndex() + 1);
     }
