@@ -65,7 +65,7 @@ String colname[]={"ID","FirstName","LastName","City","State"};
 				//sheetdata.put("City",sh.getCell(col, row).getContents());
 				//sheetdata.put("State",sh.getCell(col, row).getContents());
 				
-				String val = sg.getCell(col).getStringCellValue();
+				String val = sh.getCell(col).getStringCellValue();
 
 		}
 			System.out.println(sheetdata);
