@@ -34,7 +34,7 @@ public class ExcelRoutines {
 	    for(int s=0;s<wb.getSheetNames().length;s++)
 	    {
 	    	sh=wb.getSheet(s);
-	    	na=sh.getCell(0,0);
+	    	na=sh.getCell(0,0).toString();
 
 	    }
 	
