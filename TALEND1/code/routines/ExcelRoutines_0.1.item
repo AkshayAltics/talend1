@@ -65,8 +65,8 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				//sheetdata.put("City",sh.getCell(col, row).getContents());
 				//sheetdata.put("State",sh.getCell(col, row).getContents());
 				
-				String val = sh.getCell(col,0).getContents();
-				System.out.println("name of \t"+val);
+				//String val = sh.getCell(col,0).getContents();
+				//System.out.println("name of \t"+val);
 				
 				
 		}
