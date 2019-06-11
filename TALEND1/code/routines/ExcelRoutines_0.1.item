@@ -34,7 +34,7 @@ public class ExcelRoutines {
 		
 	
 		String shn[]=wb.getSheetNames();
-		String fileoutput = new FileInputStream("F:\\Talend workspacce\\testing_10062019.csv"); 
+		String fileoutput = new File("F:\\Talend workspacce\\testing_10062019.csv"); 
 	    
 for(int s=0;s<wb.getSheetNames().length;s++)
 {
