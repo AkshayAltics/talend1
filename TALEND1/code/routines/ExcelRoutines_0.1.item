@@ -52,7 +52,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 			for (int col = 0; col < totalNoOfCols; col++) {
 				//System.out.print(sh.getCell(col, row).getContents() + "\t");
 				//sheetdata.put(sh.getColumn(col),sh.getRow(row));
-			    sheetdata.put("",sh.getCell(sh.getColumn(col)).getContents());
+			    sheetdata.put("",sh.getCell(col,row).getContents());
 			    System.out.println(sheetdata); 
 			    System.out.println("columns is "+sh.getColumn(col));
 			    System.out.println("row is  is "+sh.getRow(row));
