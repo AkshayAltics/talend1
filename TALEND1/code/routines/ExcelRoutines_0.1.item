@@ -30,7 +30,7 @@ public class ExcelRoutines {
 		
 		String shn[]=wb.getSheetNames();
 	    HashMap<String> sheetdata = new HashMap<String>();	
-	    sheetdata.put("ID", "1");
+	  
 	    System.out.println(sheetdata); 
 	
 	    
