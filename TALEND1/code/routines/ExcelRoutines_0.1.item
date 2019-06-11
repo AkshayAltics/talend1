@@ -45,9 +45,13 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 		//System.out.println("total no of columns "+totalNoOfCols);
 		//System.out.println("no of rows "+totalNoOfRows);
+		
+		
 		for (int row = 0; row < totalNoOfRows; row++) {
 			sheetdata.remove(row);
+			
       // String colname[] ={"ID","FirstName","LastName","City","State"};
+			
 			for (int col = 0; col < totalNoOfCols; col++) {
 				String test="";
 				String data = sh.getCell(col, row).getContents();
@@ -65,6 +69,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 					//System.out.println("here is the not null data"+sh.getCell(col, row).getContents());
 					sheetdata.put(sh.getCell(col,0).getContents(),data);
 				}
+				
 			//	sheetdata.put("FirstName",sh.getCell(col, row).getContents());
 			//	sheetdata.put("LastName",sh.getCell(col, row).getContents());
 				//sheetdata.put("City",sh.getCell(col, row).getContents());
