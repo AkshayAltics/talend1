@@ -47,15 +47,13 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 		//System.out.println("total no of columns "+totalNoOfCols);
 		//System.out.println("no of rows "+totalNoOfRows);
 		for (int row = 0; row < totalNoOfRows; row++) {
-//int head=0;
-			//System.out.print(sh.getCell(1, row).getContents() + "\t");
-String colname[]={"ID","FirstName","LastName","City","State"};
+
 
 			for (int col = 0; col < totalNoOfCols; col++) {
 				String data=sh.getCell(col, row).getContents();
 				if(data=="null")
 				{//System.out.println(""+sh.getCell(col, row));
-				sheetdata.put(colname[col],"");
+				sheetdata.put(sh.getCell(col,0).getContents(),"");
 				}
 				else
 				{
