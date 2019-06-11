@@ -50,7 +50,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 
 			for (int col = 0; col < totalNoOfCols; col++) {
-				String data="null"
+				String data="null";
 				String val = sh.getCell(col,0).getContents();
 				if(val=="null")
 				{
