@@ -33,7 +33,8 @@ public class ExcelRoutines {
 	    
 	    for(int s=0;s<wb.getSheetNames().length;s++)
 	    {
-	    
+	    	sh=wb.getSheet(s);
+	    	sh_no=sh.getCell(0,0);
 
 	    }
 	
