@@ -46,13 +46,13 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 		System.out.println("total no of columns "+totalNoOfCols);
 		System.out.println("no of rows "+totalNoOfRows);
-
+		for (int row = 0; row < totalNoOfRows; row++) {
 //int head=0;
 			//System.out.print(sh.getCell(1, row).getContents() + "\t");
 
 			for (int col = 0; col < totalNoOfCols; col++) {
 				
-				for (int row = 0; row < totalNoOfRows; row++) {
+
 				sheetdata.put("ID",sh.getCell(col, row).getContents());
 				sheetdata.put("FirstName",sh.getCell(col, row).getContents());
 				sheetdata.put("LastName",sh.getCell(col, row).getContents());
