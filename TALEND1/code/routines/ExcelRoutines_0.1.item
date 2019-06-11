@@ -49,7 +49,8 @@ String colname={"ID","FirstName","LastName","City","State"};
 			for (int col = 0; col < totalNoOfCols; col++) {
 				String test="";
 				String data = sh.getCell(col, row).getContents();
-				String val = sh.getCell(col,0).getContents();
+				//String val = sh.getCell(col,0).getContents();
+				String val = colname[col];
 				if(data=="")
 				{
 					System.out.println("here is the null column is "+sh.getCell(col,0).getContents());
