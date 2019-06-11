@@ -54,7 +54,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				sheetdata.put("",sh.getCell(col, row).getContents());
 			    sheetdata.put("",sh.getCell(col, row).getContents());
 			    System.out.println(sheetdata); 
-			    System.out.println(""+sh.getColumn(col));
+			    System.out.println("columns is "+sh.getColumn(col));
 			}
 			System.out.println("\t");
 		}
