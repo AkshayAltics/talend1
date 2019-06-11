@@ -70,7 +70,7 @@ String colname[]={"ID","FirstName","LastName","City","State"};
 		}
 			System.out.println(sheetdata);
 		
-			System.out.println("\t"+sh.getName());
+			System.out.println("\t"+sh.getColumn());
 		}
 	}
 
