@@ -65,12 +65,12 @@ String colname[]={"ID","FirstName","LastName","City","State"};
 				//sheetdata.put("City",sh.getCell(col, row).getContents());
 				//sheetdata.put("State",sh.getCell(col, row).getContents());
 				
-				String val = wb.getCell(col).getStringCellValue();
+				//String val = wb.getCell(col).getStringCellValue();
 
 		}
 			System.out.println(sheetdata);
 		
-			System.out.println("\t");
+			System.out.println("\t"+sh.getName());
 		}
 	}
 
