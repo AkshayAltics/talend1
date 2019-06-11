@@ -52,7 +52,8 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 			for (int col = 0; col < totalNoOfCols; col++) {
 				String data=sh.getCell(col, row).getContents();
 				if(data=="null")
-				{//System.out.println(""+sh.getCell(col, row));
+				{
+					//System.out.println(""+sh.getCell(col, row));
 				sheetdata.put(sh.getCell(col,0).getContents(),"");
 				}
 				else
