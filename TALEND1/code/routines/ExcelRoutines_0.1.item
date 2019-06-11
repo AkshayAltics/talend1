@@ -53,7 +53,7 @@ String colname[]={"ID","FirstName","LastName","City","State"};
 			for (int col = 0; col < totalNoOfCols; col++) {
 				String data=sh.getCell(col, row).getContents();
 				//System.out.println(""+sh.getCell(col, row));
-				sheetdata.put(colname[col],);
+				sheetdata.put(colname[col],data);
 			//	sheetdata.put("FirstName",sh.getCell(col, row).getContents());
 			//	sheetdata.put("LastName",sh.getCell(col, row).getContents());
 				//sheetdata.put("City",sh.getCell(col, row).getContents());
