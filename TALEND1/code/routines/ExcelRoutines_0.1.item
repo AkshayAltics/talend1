@@ -34,7 +34,7 @@ public class ExcelRoutines {
 	    for(int s=0;s<wb.getSheetNames().length;s++)
 	    {
 	     na=shn[s].getColumns();
-	     shn_no[]=na;
+
 	    }
 	
 	    
