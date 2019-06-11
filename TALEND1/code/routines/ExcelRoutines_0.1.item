@@ -31,7 +31,7 @@ public class ExcelRoutines {
 		
 	
 		String shn[]=wb.getSheetNames();
-	    HashMap<String, String> sheetdata = new HashMap<String, String>();	
+	  	
 	    
 for(int s=0;s<wb.getSheetNames().length;s++)
 {
@@ -48,7 +48,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 		
 		
 		for (int row = 0; row < totalNoOfRows; row++) {
-			sheetdata.remove(row);
+			  HashMap<String, String> sheetdata = new HashMap<String, String>();
 			
       // String colname[] ={"ID","FirstName","LastName","City","State"};
 			
@@ -78,10 +78,10 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				
 				//System.out.println("name of \t"+val);
 				
-				System.out.println(sheetdata);
+				
 				
 		}
-			
+			System.out.println(sheetdata);
 			//System.out.println("\t");
 			sheetdata.clear();
 		}
