@@ -78,6 +78,10 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 FileWriter writer;
 writer = new FileWriter(FilePath, true);  //True = Append to file, false = Overwrite
+for (int i = 0; i < myArrList.size(); i++)
+{
+	
+}
 
     }
  }
