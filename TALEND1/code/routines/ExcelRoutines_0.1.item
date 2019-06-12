@@ -38,7 +38,7 @@ public class ExcelRoutines {
 	
 		String shn[]=wb.getSheetNames();
 		File fileoutput = new File("F:\\Talend workspacce\\testing_12062019.csv"); 
-		PrintWriter writer = new PrintWriter(fileoutput);
+		
 		StringBuilder sb = new StringBuilder();
 for(int s=0;s<wb.getSheetNames().length;s++)
 {
@@ -76,7 +76,8 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 
 
-
+FileWriter writer1;
+writer1 = new FileWriter(path, true);  //True = Append to file, false = Overwrite
 
     }
  }
