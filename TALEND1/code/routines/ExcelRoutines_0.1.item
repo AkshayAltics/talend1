@@ -26,8 +26,11 @@ public class ExcelRoutines {
     
     
     public static void readExcel() throws BiffException, IOException 
-    try {
+    
     {
+    	try {
+    		
+    	}
 		String FilePath = "F:\\Talend workspacce\\EMPExcelSampleData.xls";
 		FileInputStream fs = new FileInputStream(FilePath);
 		Workbook wb = Workbook.getWorkbook(fs);
