@@ -67,12 +67,12 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				System.out.println(sheetdata);
 			
 				myArrList.add(sheetdata);
-				sheetdata.clear();
+
 				
 				
 				System.out.println("sheetdata  size\t"+sheetdata.size());
 				System.out.println("array list size\t"+myArrList.size());
-				
+				sheetdata.clear();
 			}
 		
 	    }
