@@ -10,6 +10,7 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ExcelRoutines {
@@ -33,7 +34,7 @@ public class ExcelRoutines {
 		Sheet sh = wb.getSheet(1);
 		
 		// To get the number of rows present in sheet
-		
+		ArrayList<HashMap<String, String>> myArrList = new ArrayList<HashMap<String, String>>();
 	
 		String shn[]=wb.getSheetNames();
 		File fileoutput = new File("F:\\Talend workspacce\\testing_12062019.csv"); 
