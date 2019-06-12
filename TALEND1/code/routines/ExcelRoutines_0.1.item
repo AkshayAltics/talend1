@@ -30,7 +30,7 @@ public class ExcelRoutines {
     {
     	try {
     		
-    	}
+    	
 		String FilePath = "F:\\Talend workspacce\\EMPExcelSampleData.xls";
 		FileInputStream fs = new FileInputStream(FilePath);
 		Workbook wb = Workbook.getWorkbook(fs);
@@ -105,4 +105,13 @@ writer.close();
 
 
     }
+    } catch (IOException e) {
+ 
+    	// TODO Auto-generated catch block
+    
+    	e.printStackTrace();
+    
+    	}
+    }
+    
  }
