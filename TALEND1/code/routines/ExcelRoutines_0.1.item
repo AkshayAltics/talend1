@@ -76,8 +76,25 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 			}
 		
 	    }
+System.out.println("array list size\t"+myArrList.size());
+FileWriter writer;
+writer = new FileWriter(FilePath, true);  //True = Append to file, false = Overwrite
+for (int i = 0; i < myArrList.size(); i++)
+{
+	writer.write(myArrList.get(i).get("ID").toString());
+	writer.write(",");
+	writer.write(myArrList.get(i).get("FirstName").toString());
+	writer.write(",");
+	writer.write(myArrList.get(i).get("LastName").toString());
+	writer.write(",");
+	writer.write(myArrList.get(i).get("City").toString());
+	writer.write(",");
+	writer.write(myArrList.get(i).get("State").toString());
+	writer.write("\r\n");
+}
+System.out.println("Write success!");
 
-
+writer.close();
 
 
 
