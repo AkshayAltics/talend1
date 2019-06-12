@@ -86,7 +86,7 @@ FileWriter writer;
 writer = new FileWriter(FilePath, true);  //True = Append to file, false = Overwrite
 for (int i = 0; i < myArrList.size(); i++)
 {
-	System.out.println(myArrList.size());
+	System.out.println(myArrList.size()+""+(myArrList.get(2).get("ID").toString());
 	writer.write(myArrList.get(2).get("ID").toString());
 	writer.write(",");
 	writer.write(myArrList.get(i).get("FirstName").toString());
