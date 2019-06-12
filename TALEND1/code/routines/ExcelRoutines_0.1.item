@@ -39,7 +39,7 @@ public class ExcelRoutines {
 		String shn[]=wb.getSheetNames();
 		File fileoutput = new File("F:\\Talend workspacce\\testing_12062019.csv"); 
 		
-		StringBuilder sb = new StringBuilder();
+	
 for(int s=0;s<wb.getSheetNames().length;s++)
 {
 
@@ -65,9 +65,9 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 						//sb.append(",");
 				     }
 				System.out.println(sheetdata);
-				sb.append(sheetdata);
+			
 				myArrList.add(sheetdata);
-				 writer.write(sb.toString());
+				
 				System.out.println("\t");
 				sheetdata.clear();
 			}
