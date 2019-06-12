@@ -89,7 +89,7 @@ for (int i = 0; i < myArrList.size(); i++)
 	writer.write(myArrList.get(i).get("City").toString());
 	writer.write(",");
 	writer.write(myArrList.get(i).get("State").toString());
-	writer.write(",");
+	writer.write("\r\n");
 }
 
     }
