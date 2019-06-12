@@ -60,10 +60,11 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 						String data = sh.getCell(col, row).getContents();
 						String val = sh.getCell(col,0).getContents();
 						sheetdata.put(val,data);
-						sb.append(sheetdata);
-						sb.append(",");
+						
+						//sb.append(",");
 				     }
 				System.out.println(sheetdata);
+				sb.append(sheetdata);
 				 writer.write(sheetdata.toString());
 				System.out.println("\t");
 				sheetdata.clear();
