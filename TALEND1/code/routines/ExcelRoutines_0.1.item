@@ -77,7 +77,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 
 
 FileWriter writer;
-writer1 = new FileWriter(path, true);  //True = Append to file, false = Overwrite
+writer1 = new FileWriter(FilePath, true);  //True = Append to file, false = Overwrite
 
     }
  }
