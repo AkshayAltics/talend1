@@ -36,9 +36,9 @@ public class ExcelRoutines {
 		
 	
 		String shn[]=wb.getSheetNames();
-		File fileoutput = new File("F:\\Talend workspacce\\testing_12062019.csv"); 
-		PrintWriter writer = new PrintWriter(fileoutput);
-		 StringBuilder sb = new StringBuilder();
+		//File fileoutput = new File("F:\\Talend workspacce\\testing_12062019.csv"); 
+		//PrintWriter writer = new PrintWriter(fileoutput);
+		// StringBuilder sb = new StringBuilder();
 for(int s=0;s<wb.getSheetNames().length;s++)
 {
 
@@ -60,11 +60,11 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 						String data = sh.getCell(col, row).getContents();
 						String val = sh.getCell(col,0).getContents();
 						sheetdata.put(val,data);
-						sb.append(sheetdata);
-						sb.append(",");
+						//sb.append(sheetdata);
+						//sb.append(",");
 				     }
 				System.out.println(sheetdata);
-				 writer.write(sb.toString());
+				// writer.write(sb.toString());
 				System.out.println("\t");
 				sheetdata.clear();
 			}
