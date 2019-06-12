@@ -66,6 +66,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				     }
 				System.out.println(sheetdata);
 				sb.append(sheetdata);
+				myArrList.add(sheetdata)
 				 writer.write(sb.toString());
 				System.out.println("\t");
 				sheetdata.clear();
