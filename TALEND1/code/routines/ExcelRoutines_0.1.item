@@ -67,7 +67,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				System.out.println(sheetdata);
 			
 				myArrList.add(sheetdata);
-				
+				sheetdata.clear();
 				FileWriter writer;
 				writer = new FileWriter(FilePath, true);  //True = Append to file, false = Overwrite
 				for (int i = 0; i < myArrList.size(); i++)
@@ -89,7 +89,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 				
 				System.out.println("sheetdata  size\t"+sheetdata.size());
 				System.out.println("array list size\t"+myArrList.size());
-				sheetdata.clear();
+				
 			}
 		
 	    }
