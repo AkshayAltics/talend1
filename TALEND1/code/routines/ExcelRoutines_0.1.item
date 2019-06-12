@@ -64,7 +64,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
 						sb.append(",");
 				     }
 				System.out.println(sheetdata);
-				
+				 writer.write(sb.toString());
 				System.out.println("\t");
 				sheetdata.clear();
 			}
