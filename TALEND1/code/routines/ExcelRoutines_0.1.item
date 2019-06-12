@@ -91,6 +91,9 @@ for (int i = 0; i < myArrList.size(); i++)
 	writer.write(myArrList.get(i).get("State").toString());
 	writer.write("\r\n");
 }
+System.out.println("Write success!");
+79.
+writer.close();
 
     }
  }
