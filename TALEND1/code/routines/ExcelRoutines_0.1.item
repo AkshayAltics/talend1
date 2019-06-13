@@ -1,7 +1,8 @@
 package routines;
-
+import com.sun.rowset.internal.Row;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,8 +13,11 @@ import jxl.read.biff.BiffException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import jxl.Cell;
 
-public class ExcelRoutines {
+public class CreateWorkBook {
 
    
     public static void helloExample(String message) {
@@ -28,10 +32,15 @@ public class ExcelRoutines {
     public static void readExcel() throws BiffException, IOException 
     
     {
+    	 String FilePath = "F:\\Talend workspacce\\EMPExcelSampleData.xls";
+          //String path = "f:\\outputOfEXCELtoCSV.csv";
     	try {
     		
-    	
-		String FilePath = "F:\\Talend workspacce\\EMPExcelSampleData.xls";
+          	//String FilePath = "F:\\Talend workspacce\\EMPExcelSampleData.xls";
+                String path = "F:\\Talend workspacce\\testing_12062019.csv"; 
+		FileWriter writer;
+                writer = new FileWriter(path, true);  //True = Append to file, false = Overwrite
+                
 		FileInputStream fs = new FileInputStream(FilePath);
 		Workbook wb = Workbook.getWorkbook(fs);
 
@@ -39,72 +48,109 @@ public class ExcelRoutines {
 		Sheet sh = wb.getSheet(1);
 		
 		// To get the number of rows present in sheet
-		ArrayList<HashMap<String, String>> myArrList = new ArrayList<HashMap<String, String>>();
-	
-		String shn[]=wb.getSheetNames();
-		File fileoutput = new File("F:\\Talend workspacce\\testing_12062019.csv"); 
 		
+                HashMap<String, String> sheetdata;
+		HashMap<Integer, String> superset;
+                superset = new HashMap<Integer, String>();
+                
+                String shn[]=wb.getSheetNames();
+		
+            
+            
+          
 	
+     try
+        {
+
+     for(int s=0;s<wb.getSheetNames().length;s++)
+        {
+	sh=wb.getSheet(s);
+		int totalNoOfRows = sh.getRows();
+		// To get the number of columns present in sheet
+		int totalNoOfCols = sh.getColumns();
+		String colname="";
+               // System.out.println(" names of sheetname "+shn[s]);
+		for (int col = 0; col < totalNoOfCols; col++) {
+                    
+                                  colname=sh.getCell(col,0).getContents();
+                                  superset.put(col,colname);
+                                
+                                        }
+                 
+               }
+                        //System.out.println(" and there column name"+superset);
+            //superset.clear();       
+        }
+        
+        catch(Exception ex)
+        {
+            System.out.println("exception is createSuperSetMethod");
+        }
+
+        System.out.println(" and there column name"+superset);    
+       
+            
 for(int s=0;s<wb.getSheetNames().length;s++)
 {
 
 		System.out.println("nothing "+shn[s]);
-
+                int row_init=0;
 		sh=wb.getSheet(s);
 		int totalNoOfRows = sh.getRows();
 		// To get the number of columns present in sheet
 		int totalNoOfCols = sh.getColumns();
-		
-		for (int row = 0; row < totalNoOfRows; row++)
+		if(s!=0)
+                {
+                    row_init=1;
+                }
+                else
+                    row_init=0;
+                
+		for (int rows = row_init; rows < totalNoOfRows; rows++)
+                    
 		{
-					HashMap<String, String> sheetdata = new HashMap<String, String>();
-					
-		           // String colname[] ={"ID","FirstName","LastName","City","State"};
-					
-					for (int col = 0; col < totalNoOfCols; col++) {
+                    sheetdata = new HashMap<String, String>();
 				
-						String data = sh.getCell(col, row).getContents();
-						String val = sh.getCell(col,0).getContents();
-						sheetdata.put(val,data);
-						
-						//sb.append(",");
-				     }
-				System.out.println(sheetdata);
-			
-				myArrList.add(sheetdata);
-
+                 
+                          for (int col = 0; col < superset.size(); col++) {
 				
-				
-				System.out.println("sheetdata  size\t"+sheetdata.size());
-				System.out.println("array list size\t"+myArrList.size());
-				sheetdata.clear();
+                              String supercolumn=superset.get(col);
+                              int res=creatSuperSet(FilePath,supercolumn,shn[s]);
+                              if(res==1)
+                              {
+                                    for(int j=0;j<totalNoOfCols;j++)
+                                    {
+                                        if(supercolumn.equals(sh.getCell(j,0).getContents()))
+                                        {
+                                            String data = sh.getCell(j, rows).getContents();
+                                  sheetdata.put(supercolumn,data);
+                                     writer.write(sheetdata.put(supercolumn,data));
+                                                writer.write(",");
+                                        }
+                                        
+                                    }
+                                  
+                              }
+                              else
+                              {
+                                  sheetdata.put(supercolumn,"null");
+                                  writer.write(sheetdata.put(supercolumn,"Null"));
+                                                writer.write(",");
+                               }
+                             
+			  }
+			// System.out.println(sheetdata);
+			 writer.write("\r\n");
+                         sheetdata.clear();
+                                
+                             
 			}
-		
-	    }
-FileWriter writer;
-writer = new FileWriter(FilePath, true);  //True = Append to file, false = Overwrite
-System.out.println("final array list size\t"+myArrList.size());
 
-for (int i = 0; i < myArrList.size(); i++)
-{
-	System.out.println(myArrList);
-	writer.write(myArrList.get(2).get("ID").toString());
-	writer.write(",");
-	writer.write(myArrList.get(i).get("FirstName").toString());
-	writer.write(",");
-	writer.write(myArrList.get(i).get("LastName").toString());
-	writer.write(",");
-	writer.write(myArrList.get(i).get("City").toString());
-	writer.write(",");
-	writer.write(myArrList.get(i).get("State").toString());
-	writer.write("\r\n");
-}
-System.out.println("Write success!");
-
-writer.close();
-
-
-
+                         
+        }         
+            
+                writer.close();
+              
     }
      catch (Exception e) {
  
@@ -115,4 +161,52 @@ writer.close();
     	}
     }
     
- }
+   private static int creatSuperSet(String FilePath,String colname1,String Sheetname ) throws FileNotFoundException, IOException, BiffException {
+     
+           HashMap<Integer, String> superset = new HashMap<Integer, String>();
+       		FileInputStream fs = new FileInputStream(FilePath);
+		Workbook wb = Workbook.getWorkbook(fs);
+                   String colnamein=colname1;
+                   String sheetname=Sheetname;
+		
+		Sheet sh = wb.getSheet(sheetname);
+
+	
+		int totalNoOfCols = sh.getColumns();
+		String colname="";
+          
+		for (int col = 0; col < totalNoOfCols; col++) {
+                    
+                                  colname=sh.getCell(col,0).getContents();
+                                   if(!superset.containsKey(colname))
+                                   {
+                                        superset.put(col,colname);
+                                   }
+                                 
+                                 
+                                
+                                        }
+                //System.out.println(superset);
+
+                  if(superset.containsValue(colnamein))  
+     {
+      
+         return 1;
+     }
+      else
+     {
+  
+      return 0;
+     }
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+ 
+    }
+    
