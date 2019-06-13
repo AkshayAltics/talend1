@@ -73,7 +73,10 @@ public class ExcelRoutines {
 		for (int col = 0; col < totalNoOfCols; col++) {
                     
                                   colname=sh.getCell(col,0).getContents();
-                                  superset.put(col,colname);
+                                  if(!superset.containsValue(colname))
+                                  {
+                                       superset.put(col,colname);
+                                  }
                                 
                                         }
                  
