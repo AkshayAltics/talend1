@@ -13,7 +13,7 @@
     <module>jobs/process/demo/onboardingdemojob_0.1</module>
     <module>jobs/process/dbtry_0.1</module>
     <module>jobs/process/cts_daily_sendmessage_0.1</module>
-    <module>jobs/process/rnd_1.0</module>
+    <module>jobs/process/ExcelToCsv_MultiSchema/rnd_1.0</module>
   </modules>
   <properties>
     <talend.project.name>TALEND1</talend.project.name>
