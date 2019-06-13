@@ -115,7 +115,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
                           for (int col = 0; col < superset.size(); col++) {
 				
                               String supercolumn=superset.get(col);
-                              int res=creatSuperSet(FilePath,supercolumn,shn[s]);
+                              int res=CheckColumns(FilePath,supercolumn,shn[s]);
                               if(res==1)
                               {
                                     for(int j=0;j<totalNoOfCols;j++)
@@ -161,7 +161,7 @@ for(int s=0;s<wb.getSheetNames().length;s++)
     	}
     }
     
-   private static int creatSuperSet(String FilePath,String colname1,String Sheetname ) throws FileNotFoundException, IOException, BiffException {
+   private static int CheckColumns(String FilePath,String colname1,String Sheetname ) throws FileNotFoundException, IOException, BiffException {
      
            HashMap<Integer, String> superset = new HashMap<Integer, String>();
        		FileInputStream fs = new FileInputStream(FilePath);
